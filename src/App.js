@@ -2,6 +2,9 @@ import { useState ,useEffect } from 'react';
 import './App.css';
 
 
+
+
+
 function App() {
 
   const [userChoice, setUserChoice] = useState('rock')
@@ -31,10 +34,10 @@ function App() {
     window.location.reload()
   }
 
-  useEffect(() => {
-    const comboMoves = userChoice + computerChoice
+useEffect(() => {
+  const comboMoves = userChoice + computerChoice
 
-    if(userPoints <=4 && computerPoints <=4){
+  if(userPoints <=4 && computerPoints <=4){
       if(comboMoves ==='rockscissors' || comboMoves === 'paperrock' || comboMoves === 'scissorspaper'){
         const updateUserPoints = userPoints + 1
         setUserPoints(updateUserPoints)
@@ -45,7 +48,7 @@ function App() {
           setResult('User wins')
         }
       }
-    }
+    
 
 
     if(comboMoves ==='paperscissors' || comboMoves === 'scissorsrock' || comboMoves === 'rockpaper'){
@@ -64,9 +67,11 @@ function App() {
 
 
     }
+  }
 
+  
 
-  },[userChoice,computerChoice])
+},[])
 
 
 
