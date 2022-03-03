@@ -14,11 +14,13 @@ function App() {
   const [turnResault,setturnResault] =useState(null)
   const [result,setResult] = useState("")
   const [gameOver,setGameOver] = useState(false)
+  const [flag,setflag] = useState(false)
 
   const choices = ['rock','paper','scissors']
 
 
   const handelClick = (choice) =>{
+    setflag(true)
     setUserChoice(choice)
     generateComputerChoice()
 
@@ -27,6 +29,7 @@ function App() {
   const generateComputerChoice = () => {
     const randomChoice = choices[Math.floor(Math.random() * choices.length)]
     setComputerChoice(randomChoice)
+    setflag(true)
   }
 
 
@@ -35,6 +38,8 @@ function App() {
   }
 
 useEffect(() => {
+
+if(flag){
   const comboMoves = userChoice + computerChoice
 
   if(userPoints <=4 && computerPoints <=4){
@@ -68,10 +73,12 @@ useEffect(() => {
 
     }
   }
+}
+  return () => {
+    setflag(false)
+  }
 
-  
-
-},[])
+},[userChoice,computerChoice,computerPoints,userPoints,flag])
 
 
 
