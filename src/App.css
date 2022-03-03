@@ -5,9 +5,12 @@
 }
 
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
-  background-color: rgb(147, 213, 252);
+  text-align: center;
+  background-color: rgb(171, 211, 235);
   font-family: sans-serif;
 }
    /* heading */
@@ -35,7 +38,6 @@
 }
 .choice {
   height: 25vh;
-  width: 95vw;
   display: flex;
   justify-content: center;
 }
@@ -48,7 +50,6 @@
 }
 
 .button-div{
-  width: 95vw;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -57,9 +58,11 @@
 .button{
   width: 150px;
   height: 50px;
+  margin-top: 30px;
   justify-content: space-around;
   align-items: center;
   background-color: blue;
+  color: black !important;
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -72,23 +75,29 @@
   margin-right: 10px;
 }
 .paper{
-  background: rgb(237, 236, 243);
-  margin-right: 10px;
+  background:rgb(63, 196, 51) 
 }
 .scissors{
-  background:rgb(63, 196, 51) 
+  margin-right: 10px;
+  background: rgb(237, 236, 243);
 }
 
 
 .Turn-Result{
-  color: blue;
-}
-.Final-Result-tatle{
-  margin-bottom: 20px;
+  color: rgb(237, 236, 243);
 }
 .Final-Result{
-  color: red;
-
+  color: rgb(234, 240, 240);
+}
+    /* winner text */
+.No-one-win{
+  color: rgb(237, 236, 243);
+}
+.winner-User{
+  color: rgb(240, 34, 34);
+}
+.winner-Computer{
+  color: rgb(40, 184, 12);
 }
 
 

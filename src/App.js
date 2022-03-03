@@ -2,9 +2,6 @@ import { useState ,useEffect } from 'react';
 import './App.css';
 
 
-
-
-
 function App() {
 
   const [userChoice, setUserChoice] = useState('rock')
@@ -16,7 +13,7 @@ function App() {
   const [gameOver,setGameOver] = useState(false)
   const [flag,setflag] = useState(false)
 
-  const choices = ['rock','paper','scissors']
+  const choices = ['rock','scissors','paper']
 
 
   const handelClick = (choice) =>{
@@ -83,27 +80,33 @@ if(flag){
 
 
 
-
-
   return (
     <div className="App">
 
 
       <h1 className='heading'>
         <span className='heading-Rock'>Rock</span>
-        <span className='heading-Paper'>Paper</span>
-        <span className='heading-Scissors'>Scissors</span>
+        <span className='heading-Paper'>Scissors</span>
+        <span className='heading-Scissors'>Paper</span>
       </h1>
 
       <div className='score'>
-        <h2>User։{userPoints}</h2>
+        <h2 className='winner-User'>User։{userPoints}</h2>
 
         <h1>
           <span className='Turn-Result'>Turn Result</span><br/>
-          {turnResault}
+          <span className=
+          {
+            ` 
+            ${(turnResault === "User win")?"winner-User":""} 
+            ${(turnResault === "No one win")?"No-one-win":""} 
+            ${(turnResault === "Computer win")?"winner-Computer":""} 
+
+          `}>{turnResault}</span>
+
         </h1>
         
-        <h2>Computer։{computerPoints}</h2>
+        <h2 className='winner-Computer'>Jony:{computerPoints}</h2>
       </div>
 
 
@@ -141,7 +144,14 @@ if(flag){
                   Final Result
                 </span> <br></br>
 
-                {result}
+                <span className=
+                  {`
+                    ${(result === "User wins")?"winner-User":""} 
+                    ${(result === "Computer wins")?"winner-Computer":""}
+                  `}
+                > {result} </span>
+                  
+               
               </h2>
 
             <button 
