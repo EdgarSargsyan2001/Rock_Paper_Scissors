@@ -37,15 +37,15 @@
   align-items: center;
 }
 .choice {
-  height: 25vh;
+  height: 150px;
   display: flex;
   justify-content: center;
 }
 .computer-hand {
-  width: 250px;
+  /* width:initial ; */
 }
 .user-hand{
-  width: 250px;
+  /* width: 250px; */
   transform: rotateY(180deg);
 }
 
