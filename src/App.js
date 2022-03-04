@@ -56,10 +56,10 @@ if(flag){
     if(comboMoves ==='paperscissors' || comboMoves === 'scissorsrock' || comboMoves === 'rockpaper'){
       const updateComputerPoints = computerPoints + 1
       setComputerPoints(updateComputerPoints)
-      setturnResault('Computer win')
+      setturnResault('Jony win')
       if(updateComputerPoints === 5){
         setGameOver(true)
-        setResult('Computer wins')
+        setResult('Jony wins')
       }
 
     }
