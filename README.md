@@ -10,3 +10,5 @@
 
 # By clicking the button we select the value and pass it to the 
 # "handelClick" Function which calls the "generateComputerChoice"      function.
+
+# https://rock-scissors-paper21.netlify.app/

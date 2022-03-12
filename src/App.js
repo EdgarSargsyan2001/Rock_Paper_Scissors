@@ -100,7 +100,7 @@ if(flag){
             ` 
             ${(turnResault === "User win")?"winner-User":""} 
             ${(turnResault === "No one win")?"No-one-win":""} 
-            ${(turnResault === "Computer win")?"winner-Computer":""} 
+            ${(turnResault === "Jony win")?"winner-Computer":""} 
 
           `}>{turnResault}</span>
 
@@ -147,7 +147,7 @@ if(flag){
                 <span className=
                   {`
                     ${(result === "User wins")?"winner-User":""} 
-                    ${(result === "Computer wins")?"winner-Computer":""}
+                    ${(result === "Jony wins")?"winner-Computer":""}
                   `}
                 > {result} </span>
                   
