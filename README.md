@@ -1,4 +1,5 @@
-# The program is a game ""
+# The program is a game "Rock Paper Scissors"
+
 
 
 # The main game code is written in App․js.
